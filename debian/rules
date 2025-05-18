@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_installsystemd:
+	dh_installsystemd -padaptation-volla-mimameid-h12-configs --name=droidian-device-hacks droidian-device-hacks.service --no-start
+	dh_installsystemd -padaptation-volla-mimameid-h12-configs --name=load-wlan-module load-wlan-module.service --no-start

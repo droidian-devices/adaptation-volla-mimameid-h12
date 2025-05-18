@@ -1,0 +1,11 @@
+[Unit]
+Description=run droidian device hacks
+Requires=lxc@android.service
+After=android_boot_completed.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/adaptation-volla-mimameid-h12/device-hacks
+
+[Install]
+WantedBy=multi-user.target

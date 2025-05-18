@@ -1,0 +1,26 @@
+Source: adaptation-volla-mimameid-h12
+Maintainer: Erik Inkinen <erik.inkinen@erikinkinen.fi>
+Section: metapackages
+Priority: optional
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.5.0.3
+Vcs-Browser: https://github.com/droidian-devices/adaptation-volla-mimameid-h12
+Vcs-Git: https://github.com/droidian-devices/adaptation-volla-mimameid-h12.git
+
+Package: adaptation-volla-mimameid-h12
+Architecture: arm64
+Depends: ${misc:Depends},
+         linux-bootimage-volla-mimameid-h12,
+         adaptation-hybris-api32-phone,
+         adaptation-volla-mimameid-h12-configs,         
+         droidian-quirks-full-resize,
+         droidian-camera,
+Description: adapatation-volla-mimameid-h12 - meta
+ Volla Phone 22 api32 adaptation metapackage
+
+Package: adaptation-volla-mimameid-h12-configs
+Architecture: arm64
+Depends: ${misc:Depends},
+         adaptation-volla-mimameid-h12 (= ${binary:Version}),
+         bsdextrautils,
+Description: Volla Phone 22's specific adaptation configs (Halium 12)
